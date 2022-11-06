@@ -2,6 +2,34 @@ import csv
 
 
 
+
+
+#OPCION 3
+#AGREGAR LIBRO
+class agregar:
+    def __init__(self,id,titulo, genero, isbn,editorial, autor):
+        self.id =id
+        self.titulo= titulo
+        self.genero= genero
+        self.isbn= isbn
+        self.editorial= editorial
+        self.autor= autor
+
+    def nuevo(self):
+        nuevolibro =[str(self.id), str(self.titulo), str(self.genero),  str(self.isbn), str(self.editorial),str(self.autor)]
+
+        with open("libros.csv", "a", newline="") as myfile:
+            escribir = csv.writer(myfile)
+            escribir.writerow(nuevolibro)
+            myfile.close()
+
+
+
+
+
+
+#OPCION 7
+
 # BUSCAR LIBRO POR AUTOR
 def buscarlibro_autor(valor):
     numero= 0
@@ -40,7 +68,7 @@ def buscarlibro_editorial(valor):
                 print(datos[numero])
             numero= numero + 1
         f.close()
-        
+
 
 #BUSCAR LIBRO POR GENERO
 def buscarlibro_genero(valor):
