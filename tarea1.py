@@ -5,7 +5,7 @@ import csv
 
 
 #OPCION 3
-#AGREGAR LIBRO
+##AGREGAR LIBRO
 class agregar:
     def __init__(self,id,titulo, genero, isbn,editorial, autor):
         self.id =id
@@ -22,9 +22,6 @@ class agregar:
             escribir = csv.writer(myfile)
             escribir.writerow(nuevolibro)
             myfile.close()
-
-
-
 
 
 
